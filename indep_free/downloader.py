@@ -1,5 +1,5 @@
 import requests
-from indep_free import URL_NEWSPAPER
+from indep_free.utils import URL_NEWSPAPER
 
 class NotGetNewspaper(Exception):
     """"""
