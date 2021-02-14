@@ -9,7 +9,7 @@ from indep_free.mailer import send_mail
 def get_current_date() -> str:
     "Get the current date in the format %Y%m%d"
     today = date.today()
-    return date.strptime('%Y%m%d', today)
+    return date.strftime(today, '%Y%m%d')
 
 
 def save_file(pdf: Response,
