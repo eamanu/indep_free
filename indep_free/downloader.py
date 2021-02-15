@@ -13,6 +13,6 @@ def get_newspaper(name: str) -> requests.Response:
     """
     pdf = requests.get(URL_NEWSPAPER.format(name), allow_redirects=True)
     if not pdf.ok:
-        raise NotGetNewspaper
+        raise NotGetNewspaper(pdf.status_code)
     return pdf
 

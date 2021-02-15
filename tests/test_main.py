@@ -6,3 +6,4 @@ def test_main(mocker, envs):
     mocker.patch('indep_free.cli.download_newspaper',
                  return_value=True)
     assert main()
+

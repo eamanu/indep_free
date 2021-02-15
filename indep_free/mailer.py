@@ -18,4 +18,5 @@ def send_mail(path: Path, date_to_download: str) -> bool:
                get_message(date_to_download)]
 
         subprocess.call(cmd)
+    return True
 
