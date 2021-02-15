@@ -15,7 +15,7 @@ def test_save_file(mocker, envs, tmpdir):
 
     class FakeResponse:
         def __init__(self):
-            self.content = 'Test content'
+            self.content = b'Test content'
 
     response = FakeResponse(
     )

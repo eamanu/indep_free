@@ -14,7 +14,7 @@ def get_current_date() -> str:
 
 def save_file(pdf: Response,
               filename: Path) -> bool:
-    with open(filename, 'w') as f:
+    with open(filename, 'wb') as f:
         f.write(pdf.content)
     return True
 
