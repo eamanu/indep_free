@@ -28,7 +28,7 @@ def download_newspaper(download_folder: str,
         date_to_download = get_current_date()
 
     pdf = get_newspaper(date_to_download)
-    filename = date_to_download + date_to_download + '.pdf'
+    filename = Path(download_folder, date_to_download + '.pdf')
 
     save_file(pdf, filename)
     send_mail(filename, date_to_download)
