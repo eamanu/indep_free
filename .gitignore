@@ -131,3 +131,6 @@ dmypy.json
 # Clients drive
 #
 client_secrets.json
+credentials.json
+settings.yaml
+
