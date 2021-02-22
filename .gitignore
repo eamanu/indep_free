@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Clients drive
+#
+client_secrets.json
+credentials.json
+settings.yaml
+
