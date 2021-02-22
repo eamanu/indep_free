@@ -1,4 +1,4 @@
-import subprocess
+from subprocess import check_output
 
 from pathlib import Path
 from indep_free.utils import (
@@ -31,9 +31,8 @@ def get_message(date_to_download: str, path: Path) -> str:
 
 def send_mail(path: Path, date_to_download: str) -> bool:
     for email in TO_MAIL_LIST:
-        cmd = ["echo", get_message(date_to_download, path), "mutt",
-               "-s", MAIL_SUBJECT, '--', email]
+        cmd = f'echo "{get_message(date_to_download, path)}" | mutt -s "{MAIL_SUBJECT}" -- {email}'
 
-        subprocess.call(cmd)
+        check_output(cmd)
     return True
 
