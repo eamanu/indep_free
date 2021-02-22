@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "indep_free"
-version = "0.3.1"
+version = "0.3.2"
 description = "Send newspaper \"El Independiente\" to mail. While we can download the newspaper and sed via email."
 authors = ["Emmanuel Arias <eamanu@yaerobi.com>"]
 license = "GPL-3+"
