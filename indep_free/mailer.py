@@ -33,6 +33,6 @@ def send_mail(path: Path, date_to_download: str) -> bool:
     for email in TO_MAIL_LIST:
         cmd = f'echo "{get_message(date_to_download, path)}" | mutt -s "{MAIL_SUBJECT}" -- {email}'
 
-        check_output(cmd)
+        check_output(cmd, shell=True)
     return True
 
